@@ -1,0 +1,521 @@
+[
+    {
+        "id": "df2aabc67594a7e2",
+        "type": "tab",
+        "label": "사진 저장",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a81f8d17f6c76425",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "74eb3c21934f2c65b547face5186127768f08473410840b612e629334d560cd8-certificate.pem.crt",
+        "keyname": "74eb3c21934f2c65b547face5186127768f08473410840b612e629334d560cd8-private.pem.key",
+        "caname": "AmazonRootCA1.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "ad7fab1b1f5bfee2",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "aljof1mktxlxf-ats.iot.ap-northeast-2.amazonaws.com",
+        "port": "8883",
+        "tls": "a81f8d17f6c76425",
+        "clientid": "",
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3b1668c732b0d975",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "1c815eca37c1fa35",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2d7c183a9cea8d4d",
+        "type": "mongodb2",
+        "uri": "mongodb://localhost:27000/local",
+        "name": "admin",
+        "options": "",
+        "parallelism": ""
+    },
+    {
+        "id": "1c815eca37c1fa35",
+        "type": "ui_tab",
+        "name": "cameras",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "80b4407173bde72c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6a6f41fadb53c1ee",
+        "type": "mqtt in",
+        "z": "df2aabc67594a7e2",
+        "name": "",
+        "topic": "/outTopic",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "ad7fab1b1f5bfee2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "8ef832b1c9f3c467",
+                "d0b799a7e6313ef6"
+            ]
+        ]
+    },
+    {
+        "id": "8ef832b1c9f3c467",
+        "type": "debug",
+        "z": "df2aabc67594a7e2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "0e4662f9508b6323",
+        "type": "mqtt out",
+        "z": "df2aabc67594a7e2",
+        "name": "",
+        "topic": "/inTopic",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ad7fab1b1f5bfee2",
+        "x": 300,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "08be552316b937ad",
+        "type": "inject",
+        "z": "df2aabc67594a7e2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "aaaa",
+        "payloadType": "str",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "0e4662f9508b6323"
+            ]
+        ]
+    },
+    {
+        "id": "caa77d84390ebcd5",
+        "type": "image",
+        "z": "df2aabc67594a7e2",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 700,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "393bea2a337bdd08",
+        "type": "ui_template",
+        "z": "df2aabc67594a7e2",
+        "group": "3b1668c732b0d975",
+        "name": "전송된 사진",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "format": "<img alt=\"HTTP Snap\" src=\"data:image/jpg;base64,{{msg.payload}}\" />\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 450,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "677c9a3994c69d70",
+        "type": "function",
+        "z": "df2aabc67594a7e2",
+        "name": "findOneAndUpdate",
+        "func": "var time = new Date().toLocaleString('en-US', { timeZone: 'Asia/Seoul' });\nvar newMsg = {};\nnewMsg.collection = 'localRecord';\nnewMsg.operation  = 'findOneAndUpdate';\nnewMsg.payload    = [{ 'email' : 'soo0387@naver.com'}, {$set:{ 'picture':msg.payload, 'time':time}} ];\nnewMsg.projection = { 'email' : 1 , '_id' : 0 };\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "2cd09fb9c92826a5"
+            ]
+        ]
+    },
+    {
+        "id": "2cd09fb9c92826a5",
+        "type": "mongodb2 in",
+        "z": "df2aabc67594a7e2",
+        "service": "_ext_",
+        "configNode": "2d7c183a9cea8d4d",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 630,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0b799a7e6313ef6",
+        "type": "base64",
+        "z": "df2aabc67594a7e2",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "393bea2a337bdd08",
+                "caa77d84390ebcd5",
+                "677c9a3994c69d70"
+            ]
+        ]
+    },
+    {
+        "id": "1670d0180adb04a6",
+        "type": "inject",
+        "z": "df2aabc67594a7e2",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "567aa57961465b0d"
+            ]
+        ]
+    },
+    {
+        "id": "567aa57961465b0d",
+        "type": "function",
+        "z": "df2aabc67594a7e2",
+        "name": "findOne",
+        "func": "var newMsg = {};\nnewMsg.collection = 'localRecord';\nnewMsg.operation  = 'findOne';\nnewMsg.payload    = { 'email' : 'soo0387@naver.com'};\nnewMsg.projection = { 'email' : 1 , '_id' : 0 };\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "65ad12319f4f202d"
+            ]
+        ]
+    },
+    {
+        "id": "c90f100f8a45294f",
+        "type": "function",
+        "z": "df2aabc67594a7e2",
+        "name": "",
+        "func": "var newMsg={};\nnewMsg.payload=msg.payload.picture.toString();\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 260,
+        "wires": [
+            [
+                "8ceda97d35e0071c",
+                "827838333449a025"
+            ]
+        ]
+    },
+    {
+        "id": "65ad12319f4f202d",
+        "type": "mongodb2 in",
+        "z": "df2aabc67594a7e2",
+        "service": "_ext_",
+        "configNode": "2d7c183a9cea8d4d",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 410,
+        "y": 260,
+        "wires": [
+            [
+                "c90f100f8a45294f"
+            ]
+        ]
+    },
+    {
+        "id": "8ceda97d35e0071c",
+        "type": "image",
+        "z": "df2aabc67594a7e2",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 700,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "827838333449a025",
+        "type": "ui_template",
+        "z": "df2aabc67594a7e2",
+        "group": "3b1668c732b0d975",
+        "name": "DB 사진",
+        "order": 2,
+        "width": "6",
+        "height": "6",
+        "format": "<img alt=\"HTTP Snap\" src=\"data:image/jpg;base64,{{msg.payload}}\" />\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2757f953ecbc2d10",
+        "type": "ui_template",
+        "z": "df2aabc67594a7e2",
+        "group": "3b1668c732b0d975",
+        "name": "DB 사진보기",
+        "order": 3,
+        "width": "6",
+        "height": "6",
+        "format": "<script>\nvar value = \"1\";\n// or overwrite value in your callback function ...\nthis.scope.action = function() { return value; }\n\nfunction updateF() {\n  var source = '/photo1.JPEG',\n  timestamp = (new Date()).getTime(),\n  newUrl = source + '?_=' + timestamp;\n  document.getElementById(\"photo\").src = newUrl;\n}\n</script>\n\n<md-button ng-click=\"send({payload:action()})\" onclick=\"setTimeout(updateF, 2500);\" style=\"padding:0px; margin-bottom: 0px;\" >\n <ui-icon icon=\"camera\"></ui-icon>\n DB 사진보기<br>\n</md-button>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "567aa57961465b0d"
+            ]
+        ]
+    },
+    {
+        "id": "ceb7c93481a62860",
+        "type": "ui_template",
+        "z": "df2aabc67594a7e2",
+        "group": "3b1668c732b0d975",
+        "name": "DB 사진찍기",
+        "order": 3,
+        "width": "6",
+        "height": "6",
+        "format": "<script>\nvar value = \"2\";\n// or overwrite value in your callback function ...\nthis.scope.action = function() { return value; }\n\nfunction updateF() {\n  var source = '/photo1.JPEG',\n  timestamp = (new Date()).getTime(),\n  newUrl = source + '?_=' + timestamp;\n  document.getElementById(\"photo\").src = newUrl;\n}\n</script>\n\n<md-button ng-click=\"send({payload:action()})\" onclick=\"setTimeout(updateF, 2500);\" style=\"padding:0px; margin-bottom: 0px;\" >\n <ui-icon icon=\"camera\"></ui-icon>\n 사진찍기<br>\n</md-button>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "0e4662f9508b6323",
+                "3cdb9a50bb2e74e0"
+            ]
+        ]
+    },
+    {
+        "id": "3cdb9a50bb2e74e0",
+        "type": "debug",
+        "z": "df2aabc67594a7e2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 340,
+        "wires": []
+    }
+]
